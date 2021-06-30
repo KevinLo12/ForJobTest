@@ -11,6 +11,9 @@ libpcap_for_tcp_sniffer:
 #socket_for_tcp_sniffer:
 	#$(CC) $(CFLAGS) -o $(EXE) socket_for_tcp_sniffer.cpp
 
+strategy_dp_tcp_sniffer:
+	$(CC) $(CFLAGS) -o $(EXE) main.cpp WrappedTcpdump.cpp WrappedTshark.cpp WrappedLibpcap.cpp -lpcap
+
 .PHONY:clean
 clean:
 	rm -rf $(EXE)

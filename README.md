@@ -4,6 +4,11 @@ g++:4.9.4
 [how to get sourcecode]  
 git clone https://github.com/KevinLo12/ForJobTest.git
 
+[pre-install]  
+sudo apt-get install tcpdump  
+sudo apt-get install tshark  
+sudo apt-get install libpcap-dev  
+
 [how to build]  
 cd ForJobTest  
 #build wrapped_tcpdump_for_tcp_sniffer tool  

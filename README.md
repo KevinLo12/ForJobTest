@@ -9,6 +9,16 @@ sudo apt-get install tcpdump
 sudo apt-get install tshark  
 sudo apt-get install libpcap-dev  
 
+[only for tshark setting]  
+Error Msg => Running as user "root" and group "root". This could be dangerous.  
+tshark: Lua: Error during loading:  
+sudo dpkg-reconfigure wireshark-common => Yes  
+
+Error Msg => tshark: Couldn't run /usr/bin/dumpcap in child process: Permission denied  
+sudo usermod -a -G wireshark $USER  
+sudo adduser $USER wireshark  
+sudo reboot  
+
 [how to build]  
 cd ForJobTest  
 #build wrapped_tcpdump_for_tcp_sniffer tool  
